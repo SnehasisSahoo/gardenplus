@@ -5,6 +5,7 @@ import { initializeApp } from "firebase/app";
 import { getDatabase, onValue, ref, update } from "firebase/database";
 import { useEffect, useState } from "react";
 import { Nav } from "react-bootstrap";
+import "./globals.css";
 
 export default function Home() {
 	const [activePage, setActivePage] = useState<"health" | "irrigate">("health");
