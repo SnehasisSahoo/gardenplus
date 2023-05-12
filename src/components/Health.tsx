@@ -7,29 +7,19 @@ import { Button, Stack } from "react-bootstrap";
 import { Stat } from "./Stat";
 import Image from "next/image";
 
-export const Health = () => {
-	const [dbData, setDbData] = useState<any>({});
-
-	const firebaseConfig = {
-		project_id: "garden-plus",
-		databaseURL: "https://garden-plus-default-rtdb.firebaseio.com/",
-	};
-	const app = initializeApp(firebaseConfig);
-	const db = getDatabase(app);
-	const dbRef = ref(db, "/garden");
-
-	useEffect(() => {
-		onValue(dbRef, (snapshot) => {
-			setDbData(snapshot.val());
-		});
-	}, []);
-
+export const Health = ({ dbData, dbRef }: any) => {
 	return (
 		<>
 			<div className='d-flex justify-content-around'>
-				<Image alt='cover' src='/home-page-bg.svg' width='250' height='250' />
+				<Image
+					alt='cover'
+					src='/garden-cover.svg'
+					width='300'
+					height='300'
+					className='m-n1'
+				/>
 			</div>
-			<hr className="mb-4"/>
+			<hr className='mb-4 mx-2' />
 			<Stack gap={5} className='align-items-center'>
 				<Stack
 					gap={2}
@@ -60,6 +50,14 @@ export const Health = () => {
 					/>
 				</Stack>
 			</Stack>
+			<Button
+				hidden
+				variant='primary'
+				className='w-100 mt-3'
+				onClick={() => {}}
+			>
+				Refresh
+			</Button>
 		</>
 	);
 };
