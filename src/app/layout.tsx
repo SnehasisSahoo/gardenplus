@@ -13,8 +13,6 @@ const roboto = Roboto({
 export const metadata = {
 	title: "Garden Plus",
 	description: "App to interface with Garden Plus IoT hardware",
-	viewport: 'width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no',
-	keywords: 'IOT, Web App, Smart Garden'
 };
 
 export default function RootLayout({
