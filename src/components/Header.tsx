@@ -1,7 +1,6 @@
 "use client";
-import React from "react";
-import { Navbar, Container, Nav, Stack } from "react-bootstrap";
 import Image from "next/image";
+import { Container, Navbar, Stack } from "react-bootstrap";
 
 const Header = () => {
 	return (

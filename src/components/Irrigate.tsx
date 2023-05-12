@@ -1,8 +1,8 @@
 "use client";
-import React, { useRef, useState } from "react";
-import Image from "next/image";
-import { Button, Card, Form, Spinner, Stack } from "react-bootstrap";
 import { update } from "firebase/database";
+import Image from "next/image";
+import { useState } from "react";
+import { Button, Card, Form, Spinner, Stack } from "react-bootstrap";
 
 export const Irrigate = ({ dbData, dbRef }: any) => {
 	const [hrs, setHrs] = useState<any>("");

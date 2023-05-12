@@ -1,11 +1,8 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
 
-import { initializeApp } from "firebase/app";
-import { getDatabase, ref, onValue, get, off, child } from "firebase/database";
+import Image from "next/image";
 import { Button, Stack } from "react-bootstrap";
 import { Stat } from "./Stat";
-import Image from "next/image";
 
 export const Health = ({ dbData, dbRef }: any) => {
 	return (

@@ -1,7 +1,7 @@
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./globals.css";
 import Header from "@/components/Header";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { Roboto } from 'next/font/google';
+import "./globals.css";
 
 const roboto = Roboto({
   weight: ['400', '700'],

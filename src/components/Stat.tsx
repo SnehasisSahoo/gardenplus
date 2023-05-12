@@ -1,6 +1,5 @@
-import React from "react";
-import { Spinner, Stack } from "react-bootstrap";
 import Image from "next/image";
+import { Spinner, Stack } from "react-bootstrap";
 
 export const Stat = ({ title, data, icon }: any) => {
 	return (

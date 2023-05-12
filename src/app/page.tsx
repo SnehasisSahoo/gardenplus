@@ -1,12 +1,10 @@
 "use client";
-import Image from "next/image";
-import styles from "./page.module.css";
-import { Nav } from "react-bootstrap";
-import { useEffect, useState } from "react";
 import { Health } from "@/components/Health";
 import { Irrigate } from "@/components/Irrigate";
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, onValue, update } from "firebase/database";
+import { getDatabase, onValue, ref, update } from "firebase/database";
+import { useEffect, useState } from "react";
+import { Nav } from "react-bootstrap";
 
 export default function Home() {
 	const [activePage, setActivePage] = useState<"health" | "irrigate">("health");
