@@ -1,0 +1,22 @@
+{
+    "name": "Next Garden-Plus PWA",
+    "short_name": "gardenplus pwa",
+    "icons": [
+      {
+        "src": "/icon.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+  
+      {
+        "src": "/icon-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ],
+    "theme_color": "#fdfbfb",
+    "background_color": "#fdfbfb",
+    "start_url": "/",
+    "display": "standalone",
+    "orientation": "portrait"
+  }
