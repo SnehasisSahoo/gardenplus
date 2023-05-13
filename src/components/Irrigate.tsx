@@ -3,6 +3,7 @@ import { update } from "firebase/database";
 import Image from "next/image";
 import { useState } from "react";
 import { Button, Card, Form, Spinner, Stack } from "react-bootstrap";
+import "@/app/globals.css";
 
 export const Irrigate = ({ dbData, dbRef }: any) => {
 	const [hrs, setHrs] = useState<any>("");

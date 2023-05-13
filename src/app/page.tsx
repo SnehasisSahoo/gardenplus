@@ -5,6 +5,7 @@ import { initializeApp } from "firebase/app";
 import { getDatabase, onValue, ref, update } from "firebase/database";
 import { useEffect, useState } from "react";
 import { Nav } from "react-bootstrap";
+import "@/app/globals.css";
 
 export default function Home() {
 	const [activePage, setActivePage] = useState<"health" | "irrigate">("health");
@@ -30,12 +31,6 @@ export default function Home() {
     return () => clearInterval(interval);
 	}, []);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     update(dbRef, { "req-data": true });
-  //   }, 1000*3600);
-  //   return () => clearInterval(interval);
-  // }, []);
 
 	return (
 		<>
@@ -46,28 +41,30 @@ export default function Home() {
 					<Irrigate dbData={dbData} dbRef={dbRef} />
 				)}
 			</div>
-			<Nav justify variant='tabs' className='fixed-bottom tabs-bg'>
-				<Nav.Item>
-					<Nav.Link
-						onClick={() => {
-							setActivePage("health");
-						}}
-						active={activePage === "health" ? true : false}
-					>
-						GARDEN HEALTH
-					</Nav.Link>
-				</Nav.Item>
-				<Nav.Item>
-					<Nav.Link
-						onClick={() => {
-							setActivePage("irrigate");
-						}}
-						active={activePage === "irrigate" ? true : false}
-					>
-						DEVICE CONFIG
-					</Nav.Link>
-				</Nav.Item>
-			</Nav>
+			<footer>
+				<Nav justify variant='tabs' className='fixed-bottom tabs-bg'>
+					<Nav.Item>
+						<Nav.Link
+							onClick={() => {
+								setActivePage("health");
+							}}
+							active={activePage === "health" ? true : false}
+						>
+							GARDEN HEALTH
+						</Nav.Link>
+					</Nav.Item>
+					<Nav.Item>
+						<Nav.Link
+							onClick={() => {
+								setActivePage("irrigate");
+							}}
+							active={activePage === "irrigate" ? true : false}
+						>
+							DEVICE CONFIG
+						</Nav.Link>
+					</Nav.Item>
+				</Nav>
+			</footer>
 		</>
 	);
 }

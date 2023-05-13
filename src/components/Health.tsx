@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Button, Stack } from "react-bootstrap";
 import { Stat } from "./Stat";
+import "@/app/globals.css";
 
 export const Health = ({ dbData, dbRef }: any) => {
 	return (

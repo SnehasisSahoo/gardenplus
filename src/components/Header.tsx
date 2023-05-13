@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import { Container, Navbar, Stack } from "react-bootstrap";
+import "@/app/globals.css";
 
 const Header = () => {
 	return (
 		<header>
-			<Navbar bg='dark' variant='dark' className='fixed-top bg-dark'>
+			<Navbar bg='dark' variant='dark' className='fixed-top'>
 				<Container className='justify-content-around'>
 					<Navbar.Brand>
 						<Stack direction='horizontal' gap={3}>
