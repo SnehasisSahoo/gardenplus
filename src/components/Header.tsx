@@ -5,7 +5,7 @@ import { Container, Navbar, Stack } from "react-bootstrap";
 const Header = () => {
 	return (
 		<header>
-			<Navbar bg='dark' variant='dark' className='fixed-top'>
+			<Navbar bg='dark' variant='dark' className='fixed-top bg-dark'>
 				<Container className='justify-content-around'>
 					<Navbar.Brand>
 						<Stack direction='horizontal' gap={3}>

@@ -26,24 +26,24 @@ export const Health = ({ dbData, dbRef }: any) => {
 					<Stat
 						title='Temperature'
 						icon='/temp.png'
-						data={dbData.temp && `${dbData.temp} °C`}
+						data={dbData.temp !== undefined && `${dbData.temp} °C`}
 					/>
 					<Stat
 						title='Humidity'
 						icon='/hum.png'
-						data={dbData.hum && `${dbData.hum} %`}
+						data={dbData.hum !== undefined && `${dbData.hum} %`}
 					/>
 				</Stack>
 				<Stack gap={2} direction='horizontal'>
 					<Stat
 						title='Soil Moisture'
 						icon='/soil-moisture.png'
-						data={dbData.sm && `${dbData.sm} %`}
+						data={dbData.sm !== undefined && `${dbData.sm} %`}
 					/>
 					<Stat
 						title='Tank Level'
 						icon='/tank-lvl.png'
-						data={dbData["tank-lvl"] && (dbData["tank-lvl"] ? "Ok" : "Empty")}
+						data={dbData["tank-lvl"] !== undefined && (dbData["tank-lvl"] ? "Ok" : "Empty")}
 					/>
 				</Stack>
 			</Stack>

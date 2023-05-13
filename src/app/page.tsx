@@ -64,7 +64,7 @@ export default function Home() {
 						}}
 						active={activePage === "irrigate" ? true : false}
 					>
-						CONFIGURE DEVICE
+						DEVICE CONFIG
 					</Nav.Link>
 				</Nav.Item>
 			</Nav>
